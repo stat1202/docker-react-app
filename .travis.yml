@@ -7,7 +7,7 @@ services:
   - docker
 #스크립트를 실행할 수 있는 환경 구성
 before_install:
-  - echo "start Creating an image with dockerfile"
+  - echo "start creating an image with dockerfile"
   - docker build -t hsj1202/docker-react-app -f Dockerfile.dev .
 # 실행할 스크립트
 script: -docker run -e CI=true hsj1202/docker-react-app npm run test -- --coverage
